@@ -1,12 +1,13 @@
 # Optimization_Collective_IO_MPI
 
-#Index of contains
-(1): Explanation of benchmark-IO
-(2): Explanation of aggregation_pattern library
+# Material stored in this repository
 
-# (1) Bencharmk-IO 
+-(1): Explanation of the benchmark used for testing the optimizations proposed: benchmark-IO.c
+-(2): Explanation of aggregation_pattern library
 
-The benchmark-IO it is a version of BISP3D simulatador. This benchmark
+## (1) The bencharmk-IO 
+
+The *benchmark-IO* it is a version of BISP3D simulatador. This benchmark
 can be defined as a 3-dimensional simulator of BJT and HBT bipolar devices.
 The goal of the 3D simulation is to relate electrical characteristics of the
 device with its physical and geometrical parameters. The basic equations to be
@@ -43,7 +44,7 @@ to its corresponding file part by using Two_Phase I/O technique.
 
 For the evaluations the benchrmak-IO could be executed using four different meshes: mesh1
 (47200 nodes), mesh2 (32888 nodes), mesh3 (732563 nodes) and mesh4 (289648
-nodes). The benchmark-IO associates a data structure to each node of a mesh. The
+nodes). The *benchmark-IO* associates a data structure to each node of a mesh. The
 contents of these data structures are the data written to disk during the I/O
 phase. The number of elements that this structure has per each mesh entry is
 given by the load parameter (The FIRST PARAMETER of the executable). This means that, given a mesh and a load, the
@@ -52,7 +53,7 @@ load. We have evaluated different loads, concretely, 100, 200 and
 500.
 
 
-#(2) aggregation_pattern.c Library
+## (2) The aggregation_pattern.c library
 
 Two-Phase I/O takes place in two phases: redistributed data exchange and an I/O
 phase. In the first phase, by means of communication, small file requests are
