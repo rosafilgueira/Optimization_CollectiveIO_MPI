@@ -1,0 +1,5 @@
+set -x 
+/exports/work/inf_dir/bin/mpich2/bin/mpicc -c aggregator_pattern.c lap.c 
+/exports/work/inf_dir/bin/mpich2/bin/mpicc -c benchmark-IO.c
+/exports/work/inf_dir/bin/mpich2/bin/mpicc -o benchmark-IO benchmark-IO.o aggregator_pattern.o lap.o -lm
+
