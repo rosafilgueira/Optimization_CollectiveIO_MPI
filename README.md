@@ -1,6 +1,6 @@
 # Optimization_Collective_IO_MPI
 
-This repostiroy is dedicated to store the optimization works for improving 
+This repostiroy is dedicated to store the optimization works that I developed for improving 
 collective IO operations (Two-Phase collective I/O from ROMIO) in MPI Applications.
 
 These opitmizations (techniques) employ the Linear Assignment Problem (LAP) for finding an optimal I/O data communication schedule,
