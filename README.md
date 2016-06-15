@@ -2,8 +2,21 @@
 
 This repostiroy is dedicated to store the optimization works for improving 
 collective IO operations (Two-Phase collective I/O from ROMIO) in MPI Applications.
-These opitmizations (techniques) employ the Linear Assignment Problem (LAP) for finding an optimal I/O data communication schedule. 
-The main purpose of these techniques is the reduction of the number of communications involved in the I/O collective operation.
+
+These opitmizations (techniques) employ the Linear Assignment Problem (LAP) for finding an optimal I/O data communication schedule,
+reducing then the number of communications involved in the I/O collective operations.
+
+Here, two different aggregation criteria are proposed:
+
+        *Aggregation-by-communication-number (ACN): This criteria assigns each
+        aggregator to the node who has more highest number of contiguous data blocks
+        of the file domain associated with the aggregator. 
+
+        *Aggregation-by-voume-number (AVN): This criteria assigns each
+        aggregator to the node who has more data of the file domain associated with
+        the aggregator. 
+
+More information in the following sections. 
 
 # Material stored in IO-External 
 
