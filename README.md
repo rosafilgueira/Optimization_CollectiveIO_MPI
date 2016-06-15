@@ -91,7 +91,7 @@ Important:
 A script for running the *benchmark-IO* with the aggregation_patern is also [provided in this repository](https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/blob/master/IO-External/run-benchmark.sh), which has been used in [EDDIE cluster](http://www.ed.ac.uk/information-services/research-support/research-computing/ecdf)
 
 For more details: 
-- [Rosa'sPhD Thesis](http://www.arcos.inf.uc3m.es/~rosaf/tesis.pdf)
+- [Rosa Filgueira PhD Thesis](http://www.arcos.inf.uc3m.es/~rosaf/tesis.pdf)
 - [Paper Data Locality Aware- VECPAR 2009] (http://link.springer.com/chapter/10.1007%2F978-3-540-92859-1_14)
 - [Slides VECPAR 2009](https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/blob/master/Vecpar.pdf)
 - [Journal Paper](http://link.springer.com/article/10.1007/s11227-010-0440-0#/page-1)
