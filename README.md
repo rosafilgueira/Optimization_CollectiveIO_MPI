@@ -8,11 +8,11 @@ reducing then the number of communications involved in the I/O collective operat
 
 Here, two different aggregation criteria are proposed:
 
-        *Aggregation-by-communication-number (ACN): This criteria assigns each
+- Aggregation-by-communication-number (ACN): This criteria assigns each
         aggregator to the node who has more highest number of contiguous data blocks
         of the file domain associated with the aggregator. 
 
-        *Aggregation-by-voume-number (AVN): This criteria assigns each
+- Aggregation-by-voume-number (AVN): This criteria assigns each
         aggregator to the node who has more data of the file domain associated with
         the aggregator. 
 
@@ -20,7 +20,7 @@ More information in the following sections.
 
 # Material stored in IO-External 
 
-- Explanation of the benchmark used for testing the optimizations proposed: benchmark-IO.c
+- Explanation of the benchmark (*bencharm-IO*) used for testing the optimizations 
 - Explanation of aggregation_pattern library
 
 ## (1) The bencharmk-IO 
