@@ -1,5 +1,9 @@
 # Optimization_Collective_IO_MPI
 
+This repostiroy is dedicated to store the optimization works for improving Collective IO operations in MPI Applications.
+These opitmizations (techniques) employ the Linear Assignment Problem (LAP) for finding an optimal I/O data communication schedule. 
+The main purpose of these techniques is the reduction of the number of communications involved in the I/O collective operation.
+
 # Material stored in IO-External 
 
 - Explanation of the benchmark used for testing the optimizations proposed: benchmark-IO.c
