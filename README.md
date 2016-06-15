@@ -86,6 +86,10 @@ aggregation patterns in a function called "aggregation_inteval". This function c
 application, to obtain the aggregation list (called in this library cb_config_string) and configure
 the aggregators by using one of MPIO-HINT (cb_config_list).
 
+Important:
+
+A script for running the *benchmark-IO* with the aggregation_patern is also [stored in this repository](https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/blob/master/IO-External/run-benchmark.sh), which has been used in [EDDIE cluster](http://www.ed.ac.uk/information-services/research-support/research-computing/ecdf)
+
 For more details: 
 - [Rosa'sPhD Thesis](http://www.arcos.inf.uc3m.es/~rosaf/tesis.pdf)
 - [Paper Data Locality Aware- VECPAR 2009] (http://link.springer.com/chapter/10.1007%2F978-3-540-92859-1_14)
