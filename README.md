@@ -1,6 +1,6 @@
 # Optimization_Collective_IO_MPI
 
-# Material stored in this repository
+# Material stored in IO-External 
 
 -(1): Explanation of the benchmark used for testing the optimizations proposed: benchmark-IO.c
 -(2): Explanation of aggregation_pattern library
@@ -43,8 +43,8 @@ Once the view on the common file is declared, the compute nodes write the data
 to its corresponding file part by using Two_Phase I/O technique.
 
 For the evaluations the benchrmak-IO could be executed using four different meshes: mesh1
-(47200 nodes), mesh2 (32888 nodes), mesh3 (732563 nodes) and mesh4 (289648
-nodes). The *benchmark-IO* associates a data structure to each node of a mesh. The
+(47200 nodes)[https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/tree/master/IO-External/Mesh1], mesh2 (32888 nodes)[https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/tree/master/IO-External/Mesh2], mesh3 (732563 nodes)[https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/tree/master/IO-External/Mesh3] and mesh4 (289648
+nodes)[https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/tree/master/IO-External/Mesh4]. The *benchmark-IO* associates a data structure to each node of a mesh. The
 contents of these data structures are the data written to disk during the I/O
 phase. The number of elements that this structure has per each mesh entry is
 given by the load parameter (The FIRST PARAMETER of the executable). This means that, given a mesh and a load, the
@@ -88,7 +88,7 @@ the aggregators by using one of MPIO-HINT (cb_config_list).
 
 Important:
 
-A script for running the *benchmark-IO* with the aggregation_patern is also [stored in this repository](https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/blob/master/IO-External/run-benchmark.sh), which has been used in [EDDIE cluster](http://www.ed.ac.uk/information-services/research-support/research-computing/ecdf)
+A script for running the *benchmark-IO* with the aggregation_patern is also [provided in this repository](https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/blob/master/IO-External/run-benchmark.sh), which has been used in [EDDIE cluster](http://www.ed.ac.uk/information-services/research-support/research-computing/ecdf)
 
 For more details: 
 - [Rosa'sPhD Thesis](http://www.arcos.inf.uc3m.es/~rosaf/tesis.pdf)
