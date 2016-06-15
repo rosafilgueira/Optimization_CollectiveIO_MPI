@@ -73,11 +73,11 @@ consequence of the multiple requests performed to collect all data assigned to
 their FD. Therefore I proposed replacing the rigid assignment of aggregators
 over the processes by new two different aggregation criteria:
 
-	**Aggregation-by-communication-number (ACN): This criteria assigns each
+	Aggregation-by-communication-number (ACN): This criteria assigns each
 	aggregator to the node who has more highest number of contiguous data blocks
 	of the file domain associated with the aggregator. 
 
-	**Aggregation-by-voume-number (AVN): This criteria assigns each
+	Aggregation-by-voume-number (AVN): This criteria assigns each
 	aggregator to the node who has more data of the file domain associated with
 	the aggregator. 
 
