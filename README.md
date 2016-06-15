@@ -2,8 +2,8 @@
 
 # Material stored in IO-External 
 
--(1): Explanation of the benchmark used for testing the optimizations proposed: benchmark-IO.c
--(2): Explanation of aggregation_pattern library
+- Explanation of the benchmark used for testing the optimizations proposed: benchmark-IO.c
+- Explanation of aggregation_pattern library
 
 ## (1) The bencharmk-IO 
 
