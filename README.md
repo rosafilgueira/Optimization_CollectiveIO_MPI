@@ -1,26 +1,18 @@
 # Optimization_Collective_IO_MPI
 
-This repository contains:
-
-- C program that I have implemented myself,
-*benchmark-IO.c*, which is the parallel IO version of BIPS3D simulator software. More information at [Optimization and evaluation of parallel I/O in BIPS3D paral
-lel irregular application](http://www.arcos.inf.uc3m.es/~desingh/papers/2007/2007PMEO.pdf) 
-
-- The *aggregation_pattern.c*, which is the library used for optimizing the IO collective operations. This library has two aggregation patterns for the Two_Phase IO.
-
-
-#INDEX
+#Index of contains
 (1): Explanation of benchmark-IO
 (2): Explanation of aggregation_pattern library
 
-# Bencharmk-IO 
+# (1) Bencharmk-IO 
 
 The benchmark-IO it is a version of BISP3D simulatador. This benchmark
 can be defined as a 3-dimensional simulator of BJT and HBT bipolar devices.
 The goal of the 3D simulation is to relate electrical characteristics of the
 device with its physical and geometrical parameters. The basic equations to be
 solved are Poisson'sequation and electron and hole continuity in a
-stationary state.
+stationary state. More details at [Optimization and evaluation of parallel I/O in BIPS3D paral
+lel irregular application](http://www.arcos.inf.uc3m.es/~desingh/papers/2007/2007PMEO.pdf)
 
 Finite element methods are applied in order to discretize the Poisson
 equation, hole and electron continuity equations by using tetrahedral
@@ -59,12 +51,8 @@ number of data written is the product of the number of mesh elements and the
 load. We have evaluated different loads, concretely, 100, 200 and
 500.
 
-For more details: (Rosa'sPhD Thesis)[http://www.arcos.inf.uc3m.es/~rosaf/tesis.pdf],
-[Paper Data Locality Aware- VECPAR 2009] (http://link.springer.com/chapter/10.1007%2F978-3-540-92859-1_14)
-[Slides VECPAR 2009]()
-[Journal Paper][http://link.springer.com/article/10.1007/s11227-010-0440-0#/page-1]
 
-#(2) AGGREGATION_PATTERN.c
+#(2) aggregation_pattern.c Library
 
 Two-Phase I/O takes place in two phases: redistributed data exchange and an I/O
 phase. In the first phase, by means of communication, small file requests are
@@ -96,17 +84,22 @@ aggregation patterns in a function called "aggregation_inteval". This function c
 application, to obtain the aggregation list (called in this library cb_config_string) and configure
 the aggregators by using one of MPIO-HINT (cb_config_list).
 
-PROTOTYPE OF THE FUNCTION:
-void aggregation_interval(int myrank, int partition_number, int num_nodes,int Ds[], int Bl[],int contblocks, char *cb_config_string, int criteria)
+For more details: 
+- [Rosa'sPhD Thesis](http://www.arcos.inf.uc3m.es/~rosaf/tesis.pdf)
+- [Paper Data Locality Aware- VECPAR 2009] (http://link.springer.com/chapter/10.1007%2F978-3-540-92859-1_14)
+- [Slides VECPAR 2009]()
+- [Journal Paper](http://link.springer.com/article/10.1007/s11227-010-0440-0#/page-1)
 
-PARAMETERS OF THE FUNCTION:
-int myrank: (intput parameter) Process' rank.
-int partition_number: (input parameter) Number of processes.
-int num_nodes: (input parameter) Number of elements (in this case number of nodes of the mesh).
-in Bl[]: (input parameter) List of data blocks (the position of the first element of each data blocks)
-int Ds[]: (input parameter) List of size of data blocks (the number of the
-elements of each data blocks) 
-int contblocks: (input parameter) Number of data blocks that has each
-process. 
-char * cb_config_string: (output parameter) In this array, the aggreagation
-list is kept. 
+## Prototype of the function
+	
+	void aggregation_interval(int myrank, int partition_number, int num_nodes,int Ds[], int Bl[],int contblocks, char *cb_config_string, int criteria)
+
+## Parameters of the function
+
+	int myrank: (intput parameter) Process' rank.
+	int partition_number: (input parameter) Number of processes.
+	int num_nodes: (input parameter) Number of elements (in this case number of nodes of the mesh).
+	in Bl[]: (input parameter) List of data blocks (the position of the first element of each data blocks)
+	int Ds[]: (input parameter) List of size of data blocks (the number of the elements of each data blocks) 
+	int contblocks: (input parameter) Number of data blocks that has each process. 
+	char * cb_config_string: (output parameter) In this array, the aggreagation list is kept. 
