@@ -52,6 +52,7 @@ number of data written is the product of the number of mesh elements and the
 load. We have evaluated different loads, concretely, 100, 200 and
 500.
 
+For compiling *bechmark-IO*, a [script is stored in this repository](https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/blob/master/IO-External/compile-benchmark)
 
 ## (2) The aggregation_pattern.c library
 
@@ -88,7 +89,7 @@ the aggregators by using one of MPIO-HINT (cb_config_list).
 For more details: 
 - [Rosa'sPhD Thesis](http://www.arcos.inf.uc3m.es/~rosaf/tesis.pdf)
 - [Paper Data Locality Aware- VECPAR 2009] (http://link.springer.com/chapter/10.1007%2F978-3-540-92859-1_14)
-- [Slides VECPAR 2009]()
+- [Slides VECPAR 2009](https://github.com/rosafilgueira/Optimization_CollectiveIO_MPI/blob/master/Vecpar.pdf)
 - [Journal Paper](http://link.springer.com/article/10.1007/s11227-010-0440-0#/page-1)
 
 ## Prototype of the function
